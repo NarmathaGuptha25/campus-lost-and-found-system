@@ -1,0 +1,99 @@
+<!DOCTYPE html>html lang="en">
+<head>
+    <link rel="stylesheet" href="student.css">
+
+    <title>SIGNIN OR LOGIN</title>
+</head>
+<body><font color='pink'><font size='20'><CENTER>CAMPUS LOST AND FOUND SYSTEM</font></font></CENTER>
+ <div class="container">
+    <div class="box">
+        <!------------------ Login Box --------------------->
+        <div class="box-login" id="login">
+
+            <div class="top-header">
+                <h3>Already have an account?</h3>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" class="input-box" id="logEmail" placeholder="Enter your institutional mail id" required>
+                    <label for="logEmail"></label>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" id="logPassword" placeholder="Enter your password" required>
+                    <label for="logPassword"></label>
+                     <div class="eye-area">
+                            <div class="eye-box" onclick="myLogPassword()">
+                                <i class="fa-regular fa-eye" id="eye"></i>
+                                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                            </div>
+                     </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="formCheck" class="check">
+                    <label for="formCheck"> Remember Me</label>
+                </div>
+                <div class="input-field">
+                    <a href="lostpage.html"><input type="submit" class="input-submit" value="Login"></a>
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+     <!-------------------- Register --------------------------->
+      
+     <div class="box-register" id="register">
+
+        <div class="top-header">
+            <h3>To create an account</h3>
+
+        </div>
+        <div class="input-group">
+            <div class="input-field">
+                <input type="text" class="input-box" id="regUser" placeholder="Enter your name" required>
+                <label for="regUser"></label>
+            </div>
+            <div class="input-field">
+                <input type="text" class="input-box" id="regEmail" placeholder="Enter your institutional mail ID">
+                <label for="regEmail"></label>
+            </div>
+            <div class="input-field">
+                <input type="number" class="input-box" id="regrollno" placeholder="Enter your Rollno">
+                <label for="regrollno"></label>
+            </div>
+            <div class="input-field">
+                <input type="password" class="input-box" id="regPassword" placeholder="Enter your password" required>
+                <label for="regPassword"></label>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" id="regPassword" placeholder="Confirm password" required>
+                    <label for="regconPassword"></label>
+                 <div class="eye-area">
+                        <div class="eye-box" onclick="myRegPassword()">
+                            <i class="fa-regular fa-eye" id="eye-2"></i>
+                            <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+                        </div>
+                 </div>
+            </div>
+            <div class="remember">
+                <input type="checkbox" id="formCheck-2" class="check">
+                <label for="formCheck-2"> Remember Me</label>
+            </div>
+            <div class="input-field">
+                <input type="submit" class="input-submit" value="Sign In">
+            </div>
+        </div>
+    </div>
+    <!------------------------ Switch -------------------------->
+      
+    <div class="switch">
+        <a href="#" class="login" onclick="login()">Login</a>
+        <a href="#" class="register" onclick="register()">Register</a>
+        
+        <div class="btn-active" id="btn"></div>
+    </div>
+    </div>
+ </div>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="iconlogo.jpeg">
+    <link rel="stylesheet" href="student.css">
+
+    <title>SIGNIN OR LOGIN</title>
+</head>
+<body><h1>LOGIN OR SIGNIN</h1>
+ <div class="container">
+    <div class="box">
+        <!------------------ Login Box --------------------->
+        <div class="box-login" id="login">
+
+            <div class="top-header">
+                <h3>Already have an account?</h3>
+            </div>
+            <div class="input-group">
+                <div class="input-field">
+                    <input type="text" class="input-box" id="logEmail" placeholder="Enter your mail id" required>
+                    <label for="logEmail"></label>
+                    <span class="icon"><ion-icon name="mail-open"></ion-icon></span>
+
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" id="logPassword" placeholder="Enter your password" required>
+                    <label for="logPassword"></label>
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                     <div class="eye-area">
+                            <div class="eye-box" onclick="myLogPassword()">
+                                <i class="fa-regular fa-eye" id="eye"></i>
+                                <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+                            </div>
+                     </div>
+                </div>
+                <div class="remember">
+                    <input type="checkbox" id="formCheck" class="check">
+                                        <label for="formCheck"> Remember Me</label>
+                </div>
+                <div class="input-field">
+                    <a href="thirdpage.html"><input type="submit" class="input-submit" value="Login"></a>
+                </div>
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+            </div>
+        </div>
+     <!-------------------- Register --------------------------->
+      
+     <div class="box-register" id="register">
+
+        <div class="top-header">
+            <h3>To create an account</h3>
+
+        </div>
+        <div class="input-group">
+            <div class="input-field">
+                <input type="text" class="input-box" id="regUser" placeholder="Enter your name" required>
+                <label for="regUser"></label>
+                <span class="icon"><ion-icon name="person"></ion-icon></span>            </div>
+            <div class="input-field">
+                <input type="number" class="input-box" id="regrollno" placeholder="Enter your StaffId">
+                <label for="regrollno"></label>
+                <span class="icon"><ion-icon name="id-card"></ion-icon></span>
+            </div>
+            <div class="input-field">
+                <input type="text" class="input-box" id="regEmail" placeholder="Enter your mail ID">
+                <label for="regEmail"></label>
+                <span class="icon"><ion-icon name="mail-open"></ion-icon></span>
+            </div>
+            
+            <div class="input-field">
+                <input type="password" class="input-box" id="regPassword" placeholder="Create your password" required>
+                <label for="regPassword"></label>
+                <span class="icon"><ion-icon name="lock-closed"></span>
+                </div>
+                <div class="input-field">
+                    <input type="password" class="input-box" id="regPassword" placeholder="Confirm password" required>
+                    <label for="regconPassword"></label>
+                    <span class="icon"><ion-icon name="happy"></ion-icon></span>
+                 <div class="eye-area">
+                        <div class="eye-box" onclick="myRegPassword()">
+                            <i class="fa-regular fa-eye" id="eye-2"></i>
+                            <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+                        </div>
+                 </div>
+            </div>
+            <div class="remember">
+                <input type="checkbox" id="formCheck-2" class="check">
+                <label for="formCheck-2"> Remember Me</label>
+            </div>
+            <div class="input-field">
+                <input type="submit" class="input-submit" value="Sign In">
+            </div>
+        </div>
+    </div>
+    <!------------------------ Switch -------------------------->
+      
+    <div class="switch">
+        <a href="#" class="login" onclick="login()">Login</a>
+        <a href="#" class="register" onclick="register()">Register</a>
+        
+        <div class="btn-active" id="btn"></div>
+    </div>
+    </div>
+ </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+     var x = document.getElementById('login');
+     var y = document.getElementById('register');
+     var z = document.getElementById('btn');
+     function login(){
+        x.style.left = "27px";
+        y.style.right = "-350px";
+        z.style.left = "0px";
+     }
+     function register(){
+        x.style.left = "-350px";
+        y.style.right = "25px";
+        z.style.left = "150px";
+     }
+   function myLogPassword(){
+
+    var a = document.getElementById('logPassword');
+    var b = document.getElementById('eye');
+    var c = document.getElementById('eye-slash');
+    if(a.type === "password"){
+        a.type = "text"
+        b.style.opacity = "0";
+        c.style.opacity = "1";
+    }else{    
+        a.type = "password"
+        b.style.opacity = "1";
+        c.style.opacity = "0";
+    }
+   }
+   function myRegPassword(){
+var d = document.getElementById('regPassword');
+var b = document.getElementById("eye-2");
+var c = document.getElementById("eye-slash-2");
+if(d.type === "password"){
+    d.type = "text"
+    b.style.opacity = "0";
+    c.style.opacity = "1";
+}else{    
+    d.type = "password"
+    b.style.opacity = "1";
+    c.style.opacity = "0";
+}
+   }
+</script>
+</body>
+</html>
